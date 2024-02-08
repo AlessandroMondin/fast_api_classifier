@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "FastAPI",
+            "type": "python",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                // Replace "main" with the name of your Python file without the .py extension
+                "main:app", 
+                "--reload"
+            ],
+            "jinja": true,
+            "console": "integratedTerminal"
+        }
+    ]
+}
