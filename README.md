@@ -6,11 +6,10 @@ When working with MacM1, in order to create an Image to be run locally use:
 
         docker build -t myfastapiapp .
 
-
 When working with MacM1, in order to create an Image to be run on X86_64 processors use:
 
-        docker build -t myfastapiapp .
-
+        docker buildx create --name mybuilder --use
+        docker buildx build --platform linux/amd64 -t myfastapiapp . --load
 
 ## Run container, exposing api endpoint at local `localhost:8000`:
 
